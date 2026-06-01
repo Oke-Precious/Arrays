@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Array Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="app-shell" aria-labelledby="pageTitle">
+            <div class="title-block">
+                <span class="eyebrow">JavaScript Practice</span>
+                <h1 id="pageTitle">Student Array Lab</h1>
+                <p>Add each name and watch your class list come alive.</p>
+            </div>
+
+            <div class="entry-panel">
+                <div id="errorMessage" aria-live="polite"></div>
+
+                <div class="input-row">
+                    <label for="student">Student name</label>
+                    <input type="text" id="student" placeholder="Type a name here">
+                    <button type="button" onclick="addStudent()">Add Student</button>
+                </div>
+            </div>
+
+            <div class="list-panel">
+                <div class="list-header">
+                    <span>Live Array Output</span>
+                    <span class="status-dot"></span>
+                </div>
+                <table id="show" aria-label="Added students"></table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
