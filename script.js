@@ -22,11 +22,21 @@ const addStudent =()=>{
     if (studentName.value.trim() ==='') {
         errorMessage.innerHTML = "enter something";
         errorMessage.style.color = "red";
+        setTimeout(() => {
+            errorMessage.style.display = 'none'
+        }, 1500);
     }
     else{
         allStudents.push(studentName.value)
         studentName.value = '';
+        show.innerHTML = '';
+        
+        for (let i = 0; i < allStudents.length; i++) {
+            console.log(i+1);
+            show.innerHTML += `<p>${i+1}. ${allStudents[i]}</p>`
+            
+            
+        }
         console.log(allStudents);
-        show.innerHTML = `<td>${allStudents}</td>`;
     }
 }
