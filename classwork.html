@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Classwork</title>
+</head>
+<body>
+    <p id="errorMessage"></p>
+    <input type="text" id="enterInput">
+    <button onclick="addArray()">Add</button>
+    <button onclick="delArray()">delete</button>
+    <div id="show"></div>
+</body>
+
+<script>
+    
+    const allItems = []
+    const addArray=()=>{
+        if (enterInput.value === '') {
+            errorMessage.innerHTML = "enter something"
+            setTimeout(() => {
+                errorMessage.style.display = "none"
+            }, 1500);
+        }
+        else{
+            allItems.push(enterInput.value);
+            enterInput.value = '';
+            show.innerHTML = '';
+            for (let i = 0; i < allItems.length; i++) {
+                console.log(i+1, allItems)
+                show.innerHTML += `<p>${i+1}. ${allItems[i]}</p>`;
+            }
+        }
+    }
+    const delArray=()=>{
+        if (show.innerHTML === '') {
+            errorMessage.innerHTML = "nothing to delete"
+            setTimeout(() => {
+                errorMessage.style.display = "none"
+            }, 1500);
+        }
+        else{
+            allItems.pop(enterInput.value);
+            enterInput.value = '';
+            show.innerHTML = '';
+            for (let i = 0; i < allItems.length; i++) {
+                console.log(i+1, allItems)
+                show.innerHTML += `<p>${i+1}. ${allItems[i]}</p>`;
+            }
+        }
+    }
+    const arr = [1,2,3,4,5]
+    arr.splice
+
+    
+</script>
+</html>
