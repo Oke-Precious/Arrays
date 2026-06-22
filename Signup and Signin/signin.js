@@ -30,7 +30,9 @@ const signIn = () =>{
                                     <span></span>
                                     <span></span>
                                 <div>`;
-            JSON.stringify(localStorage.setItem('signedInUser', found))                   
+            
+            localStorage.setItem('signedInUser', JSON.stringify(found))
+                                                   
             
             setTimeout(() => {
                 window.location.href = 'dashboard.html';
